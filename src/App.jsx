@@ -7,6 +7,8 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import ScheduleLesson from './pages/ScheduleLesson';
+import LessonCard from './Components/LessonCard';
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
         <Route path="/tutor"element={<Tutor/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/dashboard" element={<Dashboard/>}/>
+        <Route path="/schedule" element={<ScheduleLesson/>}/>
+        <Route path="/card" element={<LessonCard/>}/>
       </Routes>
       
       </BrowserRouter>
