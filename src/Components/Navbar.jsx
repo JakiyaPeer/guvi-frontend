@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import lesson from './../pages/lesson';
 
 const Navbar = () => {
   return (
@@ -15,7 +16,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/lessons" className="hover:underline">
+            <Link to="/lesson" className="hover:underline">
               Lessons
             </Link>
           </li>
@@ -37,6 +38,12 @@ const Navbar = () => {
             className="ml-2 bg-green-500 py-2 px-4 rounded hover:bg-green-600"
           >
             Register
+          </Link>
+          <Link
+            to="/lesson"
+            className="ml-2 bg-green-500 py-2 px-4 rounded hover:bg-green-600"
+          >
+            lesson
           </Link>
         </div>
       </div>

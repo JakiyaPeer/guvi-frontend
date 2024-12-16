@@ -9,6 +9,8 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import ScheduleLesson from './pages/ScheduleLesson';
 import LessonCard from './Components/LessonCard';
+import Lesson from './pages/lesson';
+import Lessons from './pages/lesson';
 
 const App = () => {
   return (
@@ -25,6 +27,10 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/schedule" element={<ScheduleLesson/>}/>
         <Route path="/card" element={<LessonCard/>}/>
+        <Route path="/lesson" element={<Lessons/>}/>
+        
+        
+    
       </Routes>
       
       </BrowserRouter>
