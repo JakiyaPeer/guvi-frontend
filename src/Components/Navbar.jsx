@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import lesson from './../pages/lesson';
+
 
 const Navbar = () => {
   return (

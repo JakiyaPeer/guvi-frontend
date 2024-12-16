@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "../utils/api";
 
-const Lessons = () => {
+const Lesson = () => {
   const [lessons, setLessons] = useState([]);
 
   useEffect(() => {
     const fetchLessons = async () => {
       try {
-        const response = await axios.get("/lessons");
+        const response = await axios.get("/lesson/lessons");
         setLessons(response.data);
       } catch (err) {
         console.error("Error fetching lessons:", err);
@@ -15,6 +15,8 @@ const Lessons = () => {
     };
 
     fetchLessons();
+    console.log("its working");
+    
   }, []);
 
   return (
@@ -76,4 +78,5 @@ const updateStatus = async (lessonId, status) => {
   }
 };
 
-export default Lessons;
+
+export default Lesson;
