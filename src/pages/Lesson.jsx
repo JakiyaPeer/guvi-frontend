@@ -7,7 +7,7 @@ const Lesson = () => {
   useEffect(() => {
     const fetchLessons = async () => {
       try {
-        const response = await axios.get("/lesson/lessons");
+        const response = await axios.get("/lessons/lessons");
         setLessons(response.data);
       } catch (err) {
         console.error("Error fetching lessons:", err);
@@ -69,7 +69,7 @@ const Lesson = () => {
 
 const updateStatus = async (lessonId, status) => {
   try {
-    await axios.put(`/lessons/${lessonId}`, { status });
+    await axios.put(`/lessons/lesson/${lessonId}`, { status });
     alert(`Lesson marked as ${status}`);
     window.location.reload(); // Refresh lessons
   } catch (err) {
