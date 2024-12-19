@@ -7,7 +7,7 @@ const Lesson = () => {
   useEffect(() => {
     const fetchLessons = async () => {
       try {
-        const response = await axios.get("/lessons/lessons");
+        const response = await axios.get("https://guvi-backend-8.onrender.com/api/lessons/lessons");
         setLessons(response.data);
       } catch (err) {
         console.error("Error fetching lessons:", err);
