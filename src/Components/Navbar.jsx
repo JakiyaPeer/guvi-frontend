@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
+
 const Navbar = () => {
   return (
     <nav className="bg-gray-950 text-white">
@@ -11,7 +12,7 @@ const Navbar = () => {
         </Link>
         <ul className="flex space-x-6">
           <li>
-            <Link to="/tutors" className="hover:underline">
+            <Link to="/Tutors" className="hover:underline">
               Find Tutors
             </Link>
           </li>
@@ -45,6 +46,7 @@ const Navbar = () => {
           >
             lesson
           </Link>
+          
         </div>
       </div>
     </nav>
