@@ -14,7 +14,7 @@ const TutorPage = () => {
   const fetchTutors = async () => {
     try {
       setError(null); // Clear errors before fetching
-      const { data } = await axios.get("http://localhost:5000/api/tutors", {
+      const { data } = await axios.get("https://guvi-backend-8.onrender.com/api/tutors/", {
         params: filters, // Pass filters as query params
       });
       setTutors(data.tutors);
