@@ -6,7 +6,7 @@ function CourseList() {
     const [courses, setCourses] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/course/')
+        fetch('https://guvi-backend-8.onrender.com/api/course/')
             .then((res) => res.json())
             .then((data) => setCourses(data));
     }, []);
