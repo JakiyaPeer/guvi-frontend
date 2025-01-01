@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 const Navbar = () => {
   return (
     <nav className="bg-gray-950 text-white">
@@ -45,6 +46,12 @@ const Navbar = () => {
             className="ml-2 bg-green-500 py-2 px-4 rounded hover:bg-green-600"
           >
             lesson
+          </Link>
+          <Link
+            to="/course"
+            className="ml-2 bg-green-500 py-2 px-4 rounded hover:bg-green-600"
+          >
+            CourseList
           </Link>
           
         </div>

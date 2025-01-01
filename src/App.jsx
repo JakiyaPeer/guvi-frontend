@@ -10,6 +10,9 @@ import Footer from './Components/Footer';
 import Lesson from './pages/Lesson';
 
 import TutorPage from './pages/Tutorpage';
+import CourseList from './pages/CourseList';
+ 
+
 
 
 
@@ -36,6 +39,8 @@ const App = () => {
      
         <Route path="/lesson" element={<Lesson/>}/>
         <Route path="/tutors" exact element={<TutorPage />} />
+        <Route path="/course" element={<CourseList/>}/>
+        
 
         
         

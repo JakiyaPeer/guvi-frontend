@@ -13,13 +13,14 @@ const Login = () => {
     setError(""); // Clear any previous errors
 
     try {
-      const response = await axios.post("https://guvi-backend-8.onrender.com/api/auth/login", {
+      const response = await axios.post("http://localhost:5000/api/auth/login", {
         email,
         password,
       });
 
       // Save token to localStorage or cookie
       localStorage.setItem("token", response.data.token);
+console.log(response.data.role);
 
       // Redirect based on user role (e.g., student or tutor)
       if (response.data.role === "student") {

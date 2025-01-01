@@ -19,7 +19,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://guvi-backend-8.onrender.com/api/auth/register", {
+      const response = await axios.post("http://localhost:5000/api/auth/register", {
         ...formData,
         role: userType,
       });
