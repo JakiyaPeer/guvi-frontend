@@ -10,30 +10,34 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(""); // Clear any previous errors
-
+    setError(""); // Clear previous errors
+  
     try {
-      const response = await axios.post("https://guvi-backend-8.onrender.com/api/auth/login", {
+      const response = await axios.post("http://localhost:5000/api/auth/login", {
         email,
         password,
       });
-      // Save token to localStorage or cookie
-      // localStorage.setItem("token", response.data.token);
+  
+      console.log("API Response:", response.data);
+  
       localStorage.setItem("token", response.data.token);
-      console.log("token", response.data.token)
       localStorage.setItem("userId", response.data.user.id);
-      console.log("user", response.data.user.id)
-      // Redirect based on user role (e.g., student or tutor)
+      console.log("Token stored:", localStorage.getItem("token"));
+      console.log("User ID stored:", localStorage.getItem("userId"));
+  
       if (response.data.user.role === "student") {
         navigate("/tutors");
-        console.log("response", response.data.role)
       } else if (response.data.user.role === "tutor") {
         navigate("/course");
+      } else {
+        console.error("Unknown role:", response.data.user.role);
       }
     } catch (err) {
-      setError(err.response.data.message || "An error occurred. Please try again.");
+      console.error("Error Response:", err.response?.data || err.message);
+      setError(err.response?.data.message || "An error occurred. Please try again.");
     }
   };
+  
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -43,7 +47,7 @@ const Login = () => {
         <form onSubmit={handleLogin}>
           <div className="mb-4">
             <label className="block text-gray-700 font-semibold mb-2" htmlFor="email">
-              Email
+            Email
             </label>
             <input
               type="email"
@@ -72,7 +76,7 @@ const Login = () => {
           <button
             type="submit"
             className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600"
-          >
+            >
             Login
           </button>
         </form>
@@ -87,4 +91,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login;
+
+
+
