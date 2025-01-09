@@ -11,6 +11,9 @@ import Lesson from './pages/Lesson';
 
 import TutorPage from './pages/Tutorpage';
 import CourseList from './pages/CourseList';
+import CourseDetail from './pages/CourseDetails';
+import TutorList from './Components/TutorList';
+import TutorProfile from './Components/TutorProfile';
  
 
 
@@ -40,7 +43,9 @@ const App = () => {
         <Route path="/lesson" element={<Lesson/>}/>
         <Route path="/tutors" exact element={<TutorPage />} />
         <Route path="/course" element={<CourseList/>}/>
-        
+        <Route path="/courses" element={<CourseDetail/>}/>
+        <Route path="/tutorlist" element={<TutorList/>}/>
+        <Route path="/tutors/:id" element={<TutorProfile/>}/>
 
         
         

@@ -17,16 +17,18 @@ const Login = () => {
         email,
         password,
       });
-
       // Save token to localStorage or cookie
+      // localStorage.setItem("token", response.data.token);
       localStorage.setItem("token", response.data.token);
-console.log(response.data.role);
-
+      console.log("token", response.data.token)
+      localStorage.setItem("userId", response.data.user.id);
+      console.log("user", response.data.user.id)
       // Redirect based on user role (e.g., student or tutor)
-      if (response.data.role === "student") {
-        navigate("/student-dashboard");
-      } else if (response.data.role === "tutor") {
-        navigate("/tutor-dashboard");
+      if (response.data.user.role === "student") {
+        navigate("/tutors");
+        console.log("response", response.data.role)
+      } else if (response.data.user.role === "tutor") {
+        navigate("/course");
       }
     } catch (err) {
       setError(err.response.data.message || "An error occurred. Please try again.");
