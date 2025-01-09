@@ -67,21 +67,19 @@ const TutorProfile = () => {
   // }
 
   return (
-    // <div className="container mx-auto p-4">
-    //   <div className="bg-white shadow-md rounded-lg p-6">
-    //     <h1 className="text-3xl font-bold mb-4">{tutor.name}</h1>
-    //     <p><strong>Subject:</strong> {tutor.subject}</p>
-    //     <p><strong>Experience:</strong> {tutor.experience} years</p>
-    //     <p><strong>Qualifications:</strong> {tutor.qualifications}</p>
-    //     <p><strong>Availability:</strong> {tutor.availability}</p>
-    //     <p><strong>Rating:</strong> {tutor.rating}</p>
+     <div className="container mx-auto p-4">
+       <div className="bg-white shadow-md rounded-lg p-6">
+         <h1 className="text-3xl font-bold mb-4">{tutor.name}</h1>
+         <p><strong>Subject:</strong> {tutor.subject}</p>
+         <p><strong>Experience:</strong> {tutor.experience} years</p>
+         <p><strong>Qualifications:</strong> {tutor.qualifications}</p>
+         <p><strong>Availability:</strong> {tutor.availability}</p>
+         <p><strong>Rating:</strong> {tutor.rating}</p>
 
-    //     <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Book a Lesson</button>
-    //   </div>
-    // </div>
-    <div>
-      profile
-    </div>
+        <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded">Book a Lesson</button>
+       </div>
+     </div>
+   
   );
 };
 
