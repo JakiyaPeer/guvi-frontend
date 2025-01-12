@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-950 text-white">
       <div className="container mx-auto flex justify-between items-center py-4">
-        <Link to="/" className="text-2xl font-bold">
+        <Link to="/" className="text-4xl font-bold">
           LMS
         </Link>
         <ul className="flex space-x-6">
@@ -32,8 +32,8 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/about" className="hover:underline">
-              About
+            <Link to="/AboutUs" className="hover:underline">
+              AboutUs
             </Link>
           </li>
         </ul>
@@ -50,24 +50,14 @@ const Navbar = () => {
           >
             Register
           </Link>
-          <Link
-            to="/lesson"
-            className="ml-2 bg-green-500 py-2 px-4 rounded hover:bg-green-600"
-          >
-            lesson
-          </Link>
+          
           <Link
             to="/course"
             className="ml-2 bg-green-500 py-2 px-4 rounded hover:bg-green-600"
           >
             CourseList
           </Link>
-          <Link
-            to="/tutorslist"
-            className="ml-2 bg-green-500 py-2 px-4 rounded hover:bg-green-600"
-          >
-            TutorList
-          </Link>
+          
           <button
       onClick={handleLogout}
       className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
