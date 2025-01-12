@@ -11,7 +11,7 @@ const TutorProfile = () => {
     // Fetch the specific tutor's data from the backend API
     const fetchTutor = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/api/auth/users/${id}`
+        const response = await fetch(`https://guvi-backend-8.onrender.com/api/auth/users/${id}`
           
         );
         if (!response.ok) {

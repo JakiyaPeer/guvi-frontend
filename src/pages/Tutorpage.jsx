@@ -27,7 +27,7 @@ const TutorPage = () => {
   const updateAvailability = async (id, newAvailability) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/api/tutors/${id}/availability`,
+        `https://guvi-backend-8.onrender.com/api/tutors/${id}/availability`,
         { availability: newAvailability }
       );
       // Update the tutor in the list with the new availability
